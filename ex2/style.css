@@ -1,0 +1,56 @@
+.grid {
+  display: flex;
+  flex-direction: row;
+  border:  1px solid rgb(0, 0, 0) ;
+
+}
+/*parti principal qui permet davoir une ligne et quatre colonne*/
+/*
+.item1{
+  border: 1px solid rgb(244, 24, 24);  
+}
+.item2{
+  border: 1px solid rgb(78, 176, 3);  
+}
+.item3{
+  border: 1px solid rgb(171, 15, 186);  
+}
+.item4{
+  border: 1px solid rgb(33, 5, 191);  
+}
+*/
+.item1,.item2,.item3,.item4 {
+  width: 25%;
+  flex-direction: row;
+    display: flex;
+      border: 1px solid rgb(0, 0, 0);  
+
+}
+/*sous partie qui permet davoir les sous  partie de chaque case des 4 colonnes*/
+@media screen and (max-width: 720px) {
+  .grid {
+    flex-wrap: nowrap;
+  }
+  
+  .item1,.item2,.item3,.item4 {
+      width: 49.01%;
+    flex-wrap: wrap;
+
+  }
+ 
+  }
+/*permet de gerer les responsives a partir de 720 px 
+coupe pas le code pour aller a la ligne = no wrap (pas de retour ) 
+(prend 49% de la largeur de chaque sous partie qui font 25% d'une des case des 4 colonnes)
+*/
+@media screen and (max-width: 360px) {
+  .grid {
+    flex-direction: column;
+    display: flex;
+  }
+  .item1,.item2,.item3,.item4  {
+    width: 100%;
+
+  }
+}
+/*permet de gerer les responsives a partir de 360 px */
